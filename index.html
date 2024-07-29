@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Include Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Sandesh Mukesh Yadav, a third-year engineering student with a passion for technology and innovation.">
+    <meta name="keywords" content="Sandesh Mukesh Yadav, Portfolio, Engineering Student, Technology, Innovation">
+    <meta name="author" content="Sandesh Mukesh Yadav">
+    <!-- Internal CSS -->
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Ensure the body takes up the full height of the viewport */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Set background color to black */
+            color: #fff; /* Set text color to white for contrast */
+        }
+
+        main {
+            flex: 1; /* Allows the main content area to grow and fill available space */
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #333; /* Set background color of main content to dark grey */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Darker shadow for contrast */
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff; /* Set header color to white */
+        }
+
+        .profile-pic {
+            display: block;
+            margin: 0 auto;
+            width: 150px; /* Resize image */
+            height: 150px; /* Resize image */
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .links {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .links a {
+            color: #fff; /* Set link color to white */
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+
+        .links a:hover {
+            color: #007bff; /* Set link hover color */
+        }
+
+        .education, .skills, .contact-info {
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden; /* Ensure the overlay doesn't overflow */
+        }
+
+        .education h2, .skills h2, .contact-info h2 {
+            margin-bottom: 10px;
+        }
+
+        .education ul, .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .education li, .skills li {
+            margin-bottom: 20px; /* Increase margin for better spacing */
+            display: grid;
+            grid-template-columns: 1fr 2fr; /* Creates two columns */
+            gap: 10px; /* Space between columns */
+            align-items: center; /* Vertically center items in the grid */
+        }
+
+        .education strong, .skills strong {
+            font-size: 1.1em;
+            color: #ddd; /* Set strong text color to light grey */
+        }
+
+        .education .college-name, .skills .skill-description {
+            color: #bbb; /* Set description color to a lighter grey */
+            font-style: italic; /* Italicize the descriptions */
+        }
+
+        .education, .contact-info {
+            background: #444; /* Set a darker background color */
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .education::before, .contact-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+            z-index: 0; /* Place the overlay behind the content */
+            /* transition: opacity 0.3s ease; */
+        }
+
+        .education:hover::before, .contact-info:hover::before {
+            opacity: 0; /* Hide overlay on hover */
+        }
+
+        .education h2, .education li, .contact-info h2, .contact-info p {
+            position: relative;
+            z-index: 1; /* Ensure text is above the overlay */
+        }
+
+        .skills {
+            background: #444; /* Set a darker background color for the skills section */
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .skills::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+            z-index: 0; /* Place the overlay behind the content */
+            transition: opacity 0.3s ease;
+        }
+
+        .skills:hover::before {
+            opacity: 0; /* Hide overlay on hover */
+        }
+
+        .skills h2, .skills li {
+            position: relative;
+            z-index: 1; /* Ensure text is above the overlay */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #111; /* Darker footer background */
+            border-top: 1px solid #444; /* Slightly lighter border for contrast */
+            font-size: 0.9em;
+            color: #ccc; /* Set footer text color to light grey */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>My Portfolio</h1>
+        <img src="sandesh image.jpg" alt="Profile Picture of Sandesh Mukesh Yadav" class="profile-pic">
+        <p>Hello! I am a third-year engineering student with a passion for technology and innovation.</p>
+        <p>Welcome to my portfolio.</p>
+        
+        
+        <div class="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>Bachelor of Engineering</strong> 
+                    <span class="college-name">Vivekanand Education Society Institute of Technology</span>
+                    <br>
+                    2022 - Present
+                </li>
+                <li>
+                    <strong>High School Diploma</strong> 
+                    <span class="college-name">GN Khalsa College</span>
+                    <br>
+                    2020 - 2022
+                </li>
+            </ul>
+        </div>
+
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>
+                    <strong>Python</strong>
+                    <span class="skill-description">Python Developer</span>
+                </li>
+                <li>
+                    <strong>Data Structures & Algorithms (DSA)</strong>
+                    <span class="skill-description">Strong understanding of data structures and algorithms</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:sandesh.vlcs@gmail.com">sandesh.vlcs@gmail.com</a></p>
+            <p>Phone: <a href="tel:8252446079">8252446079</a></p>
+            <p>Address: <a href="https://maps.app.goo.gl/7w1trCMo9Dt6ERn89" target="_blank">Kakad estate Worli Mumbai</a></p>
+            
+        </div>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/sandesh-mukesh-yadav-2a5863241/" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://www.instagram.com/sandesh.willback/" target="_blank" class="instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100050474077141" target="_blank" class="facebook">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Sandesh Mukesh Yadav. All rights reserved.</p>
+    </footer>
+</body>
+</html>
